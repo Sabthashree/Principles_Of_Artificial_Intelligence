@@ -1,0 +1,13 @@
+:- dynamic known/1.
+
+% Exercise 1: Simple Inference[cite: 24]
+start_ex1 :- assert(known(a)), assert(known(b)), infer.
+infer :- known(a), known(b), \+ known(c), assert(known(c)), write('Inferred c'), nl.
+
+% Exercise 2: Fire Alert System[cite: 24]
+check_fire :- known(smoke), known(heat), assert(known(fire)), write('Fire Alert!'), nl.
+start_fire :- assert(known(smoke)), assert(known(heat)), check_fire.
+
+% Exercise 3: Water Purity Detection[cite: 24]
+infer_pollution :- known(cloudy_water), known(bad_smell), assert(known(polluted)), write('Water is polluted'), nl.
+start_water :- assert(known(cloudy_water)), assert(known(bad_smell)), infer_pollution.

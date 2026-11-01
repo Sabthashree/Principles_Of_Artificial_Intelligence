@@ -1,0 +1,13 @@
+% Exercise 1: Sentence Matcher[cite: 22]
+sentence(the_cat_sits).
+sentence(the_dog_runs).
+
+% Exercise 2: Compound Term Unification[cite: 22]
+likes(john, food(pizza, spicy)).
+likes(mary, food(pizza, sweet)).
+
+% Exercise 3: Conflict Resolution[cite: 22]
+rule1(climate_change).
+rule2(climate_change).
+
+conflict(X) :- rule1(X), rule2(X).

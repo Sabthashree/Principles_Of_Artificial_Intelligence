@@ -1,0 +1,15 @@
+% 1. Family Relationships[cite: 19, 20]
+parent(john, mary).
+parent(mary, susan).
+parent(john, mike).
+
+grandparent(X, Y) :- parent(X, Z), parent(Z, Y).
+
+% 2. Animal Classification[cite: 19, 20]
+has_hair(tiger).
+gives_milk(tiger).
+
+mammal(X) :- has_hair(X), gives_milk(X).
+
+% 3. Simple Arithmetic Knowledge Base[cite: 19, 21]
+add(X, Y, Z) :- Z is X + Y.

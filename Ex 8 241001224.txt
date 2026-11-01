@@ -1,0 +1,17 @@
+% Exercise 1: Medical Diagnosis[cite: 23]
+has_fever(john).
+has_cough(john).
+
+has_flu(X) :- has_fever(X), has_cough(X).
+
+% Exercise 2: Student Eligibility Checker[cite: 23]
+passed(alice, maths).
+passed(alice, science).
+
+eligible(X) :- passed(X, maths), passed(X, science).
+
+% Exercise 3: Travel Planner[cite: 23]
+has_ticket(james).
+has_visa(james).
+
+can_travel(X) :- has_ticket(X), has_visa(X).
